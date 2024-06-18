@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="navbar__menu">
+            <a href="#" onclick="showUnderConstruction()">Início</a>
+            <a href="#" onclick="showUnderConstruction()">Séries</a>
+            <a href="#" onclick="showUnderConstruction()">Filmes</a>
+            <div class="navbar__logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+            </div>
+            <a href="#" onclick="showUnderConstruction()">Novidades</a>
+            <a href="#" onclick="showUnderConstruction()">Minha Lista</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Filme em Destaque</h1>
+            <p>Assista ao mais recente sucesso agora na Netflix.</p>
+            <button class="btn btn--play" onclick="playEpisode()">Assistir Episódio</button>
+            <button class="btn btn--info">Mais Informações</button>
+        </div>
+    </section>
+
+    <section class="movie-row">
+        <h2>Populares na Netflix</h2>
+        <div class="movie-row__container">
+            <button class="scroll-button left" onclick="scrollLeft()">&#9664;</button>
+            <div class="movie-row__posters">
+                <img src="img/Jujutsu.jpg" alt="Movie 1">
+                <img src="img/Sweet_Tooth_(2024)_S03_Complete_Hindi_Dubbed_Web_Series.png" alt="Movie 2">
+                <img src="img/small-winter-is-here-a-stunning-game-of-thrones-poster-series-original-imagw79mceaftsza.webp" alt="Movie 3">
+                <img src="img/slime.jpg" alt="Movie 4">
+                <img src="img/overlord.jpg" alt="Movie 5">
+                <img src="img/Dark_(série).jpg" alt="Movie 6">
+                <img src="img/stranger-things.jpg" alt="Movie 7">
+                <img src="img/nogamenolife.jpe" alt="Movie 8">
+            </div>
+            <button class="scroll-button right" onclick="scrollRight()">&#9654;</button>
+        </div>
+    </section>
+
+    <section class="episodes">
+        <h2>Episódios</h2>
+        <div class="episode-cards" id="episodeCards">
+            
+        </div>
+    </section>
+
+    <section class="share">
+        <h2>Compartilhe</h2>
+        <div class="share__buttons">
+            <button class="btn btn--facebook" onclick="shareOnFacebook()">Facebook</button>
+            <button class="btn btn--twitter" onclick="shareOnTwitter()">Twitter</button>
+            <button class="btn btn--instagram" onclick="shareOnInstagram()">Instagram</button>
+        </div>
+    </section>
+
+    <div id="episodePlayer" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlayer()">&times;</span>
+            <h2 id="playerTitle"></h2>
+            <video id="playerVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

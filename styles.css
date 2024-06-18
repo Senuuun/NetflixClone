@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__logo img {
+    height: 30px; 
+}
+
+.navbar__menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.navbar__menu a:hover {
+    color: #e50914;
+}
+
+.hero {
+    height: 70vh;
+    background: url('img/Shadow.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero__content {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero__content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero__content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn--play {
+    background-color: #e50914;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn--info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+    border-radius: 5px;
+}
+
+.movie-row {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.movie-row h2 {
+    margin: 0 0 20px;
+}
+
+.movie-row__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.movie-row__posters {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.movie-row__posters img {
+    width: 200px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+    border-radius: 5px;
+}
+
+.movie-row__posters img:hover {
+    transform: scale(1.1);
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.share {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.share__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn--facebook {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.btn--twitter {
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.btn--instagram {
+    background-color: #e4405f;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#playerVideo {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.episode-card {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.episode-card:hover {
+    background-color: #555;
+}
+
+.episode-card.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
